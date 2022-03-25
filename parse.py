@@ -39,13 +39,13 @@ for i in range(len(images)):
     items.reverse()
     items_print_order = items.copy()
     # Routine - remove headers and footers
-    items.sort(key=lambda poop: poop[1][1])
+    items.sort(key=lambda temp: temp[1][1])
     top = bottom = 0
     headers_line = [items[-1][1][1], items[0][1][1]]
 
     items_print_order = [x for x in items_print_order if x[1][1] not in headers_line]
 
-    cv2.imwrite('/home/sagi/test_poop{}.jpg'.format(i), im2)
+    cv2.imwrite('/home/sagi/test_temp{}.jpg'.format(i), im2)
 
     full_items.extend(items_print_order)
     items = []
